@@ -64,8 +64,8 @@ public class MainActivity extends AppCompatActivity {
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
 
-        /***  Begin generating dummy data for In-Memory implementation  ***/
-        expenseManager = new InMemoryDemoExpenseManager();
+        /*** Setup the persistent storage implementation ***/
+        expenseManager = new PersistentExpenseManager(this);
         /*** END ***/
     }
 
